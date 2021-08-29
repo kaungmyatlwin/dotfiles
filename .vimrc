@@ -6,6 +6,8 @@ call plug#begin()
 	Plug 'junegunn/fzf.vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'liuchengxu/space-vim-dark'
+	Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+	Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " NERDTree shortcuts
@@ -43,3 +45,20 @@ vnoremap <Tab> >
 vnoremap <S-Tab> <
 set relativenumber
 set clipboard=unnamedplus
+set ts=2
+set sts=2
+set relativenumber 
+set et "expand tabs to spaces
+set incsearch
+syntax on
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP
+
+" Theme
+colorscheme space-vim-dark
+hi Comment cterm=italic
+"	Range:   233 (darkest) ~ 238 (lightest)
+" Default: 235
+let g:space_vim_dark_background = 234
+color space-vim-dark
